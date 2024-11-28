@@ -1,0 +1,124 @@
+.wrapper {
+    @apply flex justify-between items-center w-full border-2 h-16 p-5 box-border relative;
+}
+
+.title-wrapper {
+    @apply flex w-1/4 justify-start;
+}
+
+.title {
+    @apply text-3xl font-bold px-0 lg:px-6;
+}
+
+.navs-wrapper {
+    @apply hidden lg:flex w-4/5 justify-start;
+}
+
+.nav-list {
+    @apply flex gap-8;
+}
+
+.nav-item,
+.setting-item {
+    @apply text-lg font-medium cursor-pointer decoration-black hover:text-[var(--hover-accent)];
+}
+
+.setting-item {
+    @apply text-xl md:text-2xl;
+}
+
+.active {
+    @apply underline decoration-mildPink decoration-2 underline-offset-8;
+}
+
+.auth-wrapper,
+.setting-wrapper {
+    @apply hidden lg:flex w-2/5 md:w-3/5 lg:w-[250px] justify-end;
+}
+
+.setting-wrapper {
+    @apply flex md:px-3;
+}
+
+.mobile-tab {
+   @apply flex lg:hidden; 
+}
+
+.background {
+    @apply absolute top-0 left-0 bottom-0 w-[300px] bg-[#fff];
+}
+
+.menu-toggle {
+    @apply outline-none border-none cursor-pointer top-1 right-4 w-12 h-12 rounded-[50%] p-3;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background: var(--accent);
+}
+
+
+.menu-toggle path {
+    fill: var(--background);
+}
+
+.menu {
+    @apply fixed top-0 right-0 bottom-0 w-[250px] md:w-[400px] pt-[70px] overflow-y-auto;
+    
+    background: var(--accent);
+    transform: translateX(100%);
+    will-change: transform;
+}
+
+.menu-list,
+.auth-list {
+    @apply flex flex-col gap-2 md:gap-4 px-7 md:pl-16;
+}
+
+.auth-list {
+    @apply my-7;
+}
+
+.menu-item {
+    @apply block font-semibold text-lg md:text-xl p-1;
+
+    color: var(--background);
+    transform-origin: -20px 50%;
+    font-weight: semibold;
+    will-change: transform, opacity, filter;
+}
+
+.account-menu {
+    @apply w-[150px];
+}
+
+.account-toggle {
+    @apply border-none rounded-[10px] pt-[10px] px-5 text-lg font-bold cursor-pointer w-full text-left;
+    @apply flex justify-between items-center;
+
+    -webkit-appearance: button;
+    color: var(--accent);
+  }
+  
+.account-toggle path {
+    fill: var(--accent);
+}
+
+.account-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--accent);
+}
+
+.account-item {
+    color: var(--background);
+    display: block;
+}
+
+.account-list,
+.account-item {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
